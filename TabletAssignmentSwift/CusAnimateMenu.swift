@@ -20,7 +20,7 @@ class CusAnimateMenu: UIView, UITableViewDelegate, UITableViewDataSource {
     var menuItems:NSArray?
     var viewForMenu: UIView?
     var viewForTable:UITableView?
-    var delegate: CusAnimateMenuDelegate?
+    weak var delegate: CusAnimateMenuDelegate?
     var scrollView: UIScrollView?
     var BlurView: UIView?
     var contentView: UIView?
