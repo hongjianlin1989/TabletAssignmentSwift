@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BiO-ID-SMN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Main Collection View Controller-->
+        <scene sceneID="UPD-So-vcu">
+            <objects>
+                <collectionViewController id="eXe-6a-9Cl" customClass="MainCollectionViewController" customModule="TabletAssignmentSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bod-sd-Uli">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PJt-gh-peC">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="kam-2s-3nV" customClass="MyCollectionViewCell" customModule="TabletAssignmentSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="edk-zc-bNt">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="edk-zc-bNt" firstAttribute="top" secondItem="kam-2s-3nV" secondAttribute="top" id="0NL-EN-73c"/>
+                                    <constraint firstAttribute="bottom" secondItem="edk-zc-bNt" secondAttribute="bottom" id="0T3-Xb-vrF"/>
+                                    <constraint firstItem="edk-zc-bNt" firstAttribute="leading" secondItem="kam-2s-3nV" secondAttribute="leading" id="Y31-gS-zJl"/>
+                                    <constraint firstAttribute="trailing" secondItem="edk-zc-bNt" secondAttribute="trailing" id="nnN-gV-M3W"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="edk-zc-bNt" id="MKa-Ta-PQ4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="eXe-6a-9Cl" id="tvP-gJ-vj7"/>
+                            <outlet property="delegate" destination="eXe-6a-9Cl" id="SIp-FG-xmJ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="bQs-Ok-tcq"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxY-cD-h6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="528"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ty5-sT-fk0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BiO-ID-SMN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vHb-n8-Lck">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eXe-6a-9Cl" kind="relationship" relationship="rootViewController" id="9lp-G7-qMe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2e6-YF-j3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="528"/>
+        </scene>
+    </scenes>
+</document>
